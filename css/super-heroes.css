@@ -1,0 +1,42 @@
+@import url("normalize.css");
+
+a{
+	text-decoration: none;
+}
+
+body,html
+{
+	background: #EEE;
+	font-family: Helvetica, Arial;
+	font-size: 16px;
+	text-align: center;
+}
+
+img
+{
+	max-width: 100%;
+}
+
+.cabecera,.contenido
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 15%;
+}
+
+.contenido
+{
+	background: white;
+	width: 80%;
+}
+
+#insertar
+{
+	color: #292623;
+	font-size: 1.5em;
+	background: orange;
+	padding: .5em;
+	border-radius: .5em .5em;
+	top: .5em;
+	position: relative;
+} 
