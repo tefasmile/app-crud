@@ -1,5 +1,6 @@
 <?php
-/*Documentación php: http://php.net/manual/es/function.sprintf.php*/ 
+/*Documentación php: http://php.net/manual/es/function.sprintf.php*/
+/*Documentación php: http://php.net/manual/es/function.printf.php*/  
 /*Conectando nuestra Base de Datos*/
 /*require "config.php";*/
 require_once "config.php";
@@ -26,14 +27,14 @@ function conexionMySQL()
 	{
 		/*$formato = "<div class='mensaje'>Conexión exitosa: <b>".$conexion->host_info."</b></div>";
 		echo $formato;*/
-		$formato = "<div class='mensaje'>Conexión exitosa: <b>%s</b></div>";
-		printf($formato,$conexion->host_info);
+		//$formato = "<div class='mensaje'>Conexión exitosa: <b>%s</b></div>";
+		//printf($formato,$conexion->host_info);
 	}
 
-	//$conexion->query("SET CHARACTER SET UTF8");
+	$conexion->query("SET CHARACTER SET UTF8");
 
 	return $conexion;
 }
 
-conexionMySQL();
+//conexionMySQL();
 ?>
