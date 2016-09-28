@@ -40,7 +40,12 @@ function enviarDatos () {
 			//condicionales de ayuda para desencadenar los eventos necesarios para cada uno de lo modulos
 			if(ajax.responseText.indexOf("data-insertar")>-1)
 			{
-				document.querySelector("#alta-heroe").addEventListener("submit",insertarHeroe)
+				document.querySelector("#alta-heroe").addEventListener("submit",insertarHeroe);
+			}
+
+			if(ajax.responseText.indexOf("data-recargar")>-1)
+			{
+				setTimeout(window.location.reload(),3000);
 			}
 		}
 		else
@@ -66,10 +71,10 @@ function ejecutarAJAX (datos){
 	ajax.send(datos);
 }
 
-function insertarHeroe (e) {
+function insertarHeroe(evento) {
 	//alert("me insertan");
 
-	e.preventDefault();
+	evento.preventDefault();
 	/*console.log(e);
 	console.log(e.target);
 	console.log(e.target[0]);
@@ -77,20 +82,19 @@ function insertarHeroe (e) {
 
 	var nombre = new Array();
 	var valor  = new Array();
-	var hijosForm = e.target;
+	var hijosForm = evento.target;
 	var datos  = "";
 
 	//empieza en 1 por etiqueta fieldset
+	//construccion dinamica de cadena de datos con for
 	for(var i=1; i<hijosForm.length; i++)
 	{
 		nombre[i] = hijosForm[i].name;
 		valor[i] = hijosForm[i].value;
 
 		datos += nombre[i]+"="+valor[i]+"&";
-		//console.log(datos);
+		console.log(datos);
 	}
-
-
 	//var datos = "transaccion=insertar";
 	ejecutarAJAX(datos);
 }

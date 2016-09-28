@@ -1,6 +1,6 @@
 <?php
-require "vistas.php";
 require "modelo.php";
+require "vistas.php";
 
 /*
 Aplicación CreateReadUpdateDelete
@@ -16,7 +16,7 @@ Delete  Afecta BD     DELETE (SQL)  POST  MODELO
 
 $transaccion = $_POST["transaccion"];
 
-function ejecutarTransaccion ($transaccion) {
+function ejecutarTransaccion($transaccion) {
 	if($transaccion == "alta")
 	{
 		//Mostrar el formulario de alta
@@ -25,12 +25,14 @@ function ejecutarTransaccion ($transaccion) {
 	else if($transaccion == "insertar")
 	{
 		//Procesar datos del formulario de alta e insertarlos en mysql
+		//Esta funcion se ejecuta
 		insertarHeroe(
-			$_POST["nombre_txt"],
-			$_POST["imagen_txt"],
-			$_POST["descripcion_txa"],
-			$_POST["editorial_slc"]
+			$_POST['nombre_txt'],
+			$_POST['imagen_txt'],
+			$_POST['descripcion_txa'],
+			$_POST['editorial_slc']
 		);
+		//echo "Me han insertado";
 	}
 	else if($transaccion == "eliminar")
 	{

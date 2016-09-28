@@ -21,6 +21,6 @@
 		<div id="precarga"></div>
 		<?php mostrarHeroes(); ?>
 	</section>
-	<script src="js/super-heroes.js"></script>
+	<script src="js/despachador.js"></script>
 </body>
 </html>
