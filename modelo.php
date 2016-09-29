@@ -2,13 +2,12 @@
 require_once "conexion.php";//conexion a BD
 
 //Esta funcion esta definida
-function insertarHeroe($nombre,$imagen,$descripcion,$editorial) 
+function insertarHeroe ($nombre,$imagen,$descripcion,$editorial) 
 {
 	$sql = "INSERT INTO heroes (id_heroe,nombre,imagen,descripcion,editorial) VALUES (0,'$nombre','$imagen','$descripcion',$editorial)";
 
 	$mysql = conexionMySQL();
 
-	echo $sql;
 
 	if($resultado = $mysql->query($sql))
 	{
@@ -22,5 +21,6 @@ function insertarHeroe($nombre,$imagen,$descripcion,$editorial)
 	$mysql->close();
 
 	return printf($respuesta);
+
 }
 ?>

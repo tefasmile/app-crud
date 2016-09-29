@@ -5,6 +5,7 @@
 /*require "config.php";*/
 require_once "config.php";
 
+
 function conexionMySQL()
 {
 	//echo "Hola mundo";

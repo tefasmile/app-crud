@@ -1,6 +1,6 @@
 <?php
-require "modelo.php";
 require "vistas.php";
+require "modelo.php";
 
 /*
 Aplicación CreateReadUpdateDelete
@@ -22,7 +22,7 @@ function ejecutarTransaccion($transaccion) {
 		//Mostrar el formulario de alta
 		altaHeroe();
 	}
-	else if($transaccion == "insertar")
+	else if($transaccion=="insertar")
 	{
 		//Procesar datos del formulario de alta e insertarlos en mysql
 		//Esta funcion se ejecuta

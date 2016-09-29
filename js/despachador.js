@@ -71,7 +71,8 @@ function ejecutarAJAX (datos){
 	ajax.send(datos);
 }
 
-function insertarHeroe(evento) {
+function insertarHeroe(evento) 
+{
 	//alert("me insertan");
 
 	evento.preventDefault();
@@ -83,8 +84,8 @@ function insertarHeroe(evento) {
 	var nombre = new Array();
 	var valor  = new Array();
 	var hijosForm = evento.target;
-	var datos  = "";
-
+	var datos = "";
+	
 	//empieza en 1 por etiqueta fieldset
 	//construccion dinamica de cadena de datos con for
 	for(var i=1; i<hijosForm.length; i++)
@@ -92,7 +93,7 @@ function insertarHeroe(evento) {
 		nombre[i] = hijosForm[i].name;
 		valor[i] = hijosForm[i].value;
 
-		datos += nombre[i]+"="+valor[i]+"&";
+		datos += nombre[i]+ "=" +valor[i]+ "&";
 		console.log(datos);
 	}
 	//var datos = "transaccion=insertar";
