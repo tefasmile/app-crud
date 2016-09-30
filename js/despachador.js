@@ -73,7 +73,7 @@ function ejecutarAJAX (datos){
 
 function insertarHeroe(evento) 
 {
-	//alert("me insertan");
+	//alert("Procesa formulario");
 
 	evento.preventDefault();
 	/*console.log(e);
@@ -94,9 +94,8 @@ function insertarHeroe(evento)
 		valor[i] = hijosForm[i].value;
 
 		datos += nombre[i]+ "=" +valor[i]+ "&";
-		console.log(datos);
+		//console.log(datos);
 	}
-	//var datos = "transaccion=insertar";
 	ejecutarAJAX(datos);
 }
 

@@ -28,8 +28,8 @@ function conexionMySQL()
 	{
 		/*$formato = "<div class='mensaje'>Conexión exitosa: <b>".$conexion->host_info."</b></div>";
 		echo $formato;*/
-		//$formato = "<div class='mensaje'>Conexión exitosa: <b>%s</b></div>";
-		//printf($formato,$conexion->host_info);
+		/*$formato = "<div class='mensaje'>Conexión exitosa: <b>%s</b></div>";
+		printf($formato,$conexion->host_info);*/
 	}
 
 	$conexion->query("SET CHARACTER SET UTF8");

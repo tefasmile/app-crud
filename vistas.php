@@ -63,8 +63,8 @@ function altaHeroe()
 				$form .= listaEditoriales();
 			$form .= "</div>";
 			$form .= "<div>";
-				$form .= "<input type='submit' id='insertar-btn' name='insertar_btn' value='Insertar'/>";
-				$form .= "<input type='hidden' id='transaccion' name='transaccion' value='Insertar'/>";
+				$form .= "<input type='submit' id='insertar-btn' name='insertar_btn' value='insertar'/>";
+				$form .= "<input type='hidden' id='transaccion' name='transaccion' value='insertar'/>";
 			$form .= "</div>";
 		$form .= "</fieldset>";
 	$form .= "</form>";

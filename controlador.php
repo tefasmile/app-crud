@@ -17,7 +17,7 @@ Delete  Afecta BD     DELETE (SQL)  POST  MODELO
 $transaccion = $_POST["transaccion"];
 
 function ejecutarTransaccion($transaccion) {
-	if($transaccion == "alta")
+	if($transaccion=="alta")
 	{
 		//Mostrar el formulario de alta
 		altaHeroe();
@@ -26,23 +26,18 @@ function ejecutarTransaccion($transaccion) {
 	{
 		//Procesar datos del formulario de alta e insertarlos en mysql
 		//Esta funcion se ejecuta
-		insertarHeroe(
-			$_POST['nombre_txt'],
-			$_POST['imagen_txt'],
-			$_POST['descripcion_txa'],
-			$_POST['editorial_slc']
-		);
-		//echo "Me han insertado";
+		insertarHeroe($_POST['nombre_txt'],$_POST['imagen_txt'],$_POST['descripcion_txa'],$_POST['editorial_slc']);
+		//echo "Obtener datos del form y agregarlos a la BD";
 	}
-	else if($transaccion == "eliminar")
+	else if($transaccion=="eliminar")
 	{
 		//Eliminar de mysql el registro solicitado
 	}
-	else if($transaccion == "editar")
+	else if($transaccion=="editar")
 	{
 		//Traer los datos del registro a modificar en un formulario
 	}
-	else if($transaccion == "actualizar")
+	else if($transaccion=="actualizar")
 	{
 		//Modificar en MySQL los datos del registro modificado
 	}
